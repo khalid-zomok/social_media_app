@@ -10,7 +10,7 @@ export default function Layout() {
 
   return (
     <div className="flex flex-col min-h-screen bg-zinc-950 text-white">
-      
+      <Navbar/>
       <div className="flex flex-1 relative w-full max-w-[1440px] mx-auto">
         
         {/* Main Content */}
