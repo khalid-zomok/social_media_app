@@ -4,7 +4,6 @@ import PostCard from "./../PostCard/PostCard";
 import { Vortex } from "react-loader-spinner";
 import { useQuery } from "@tanstack/react-query";
 import PostCreation from './../PostCreation/PostCreation';
-import { Helmet } from "react-helmet";
 
 export default function Home() {
   const getAllPosts = () => {
@@ -54,7 +53,6 @@ export default function Home() {
   }
   return (
     <div className="max-w-6xl mx-auto">
-      <Helmet><title>Home | Zomok X</title></Helmet>
       
       <div className="mb-8 max-w-2xl mx-auto">
         <PostCreation />
