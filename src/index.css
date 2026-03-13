@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@plugin './hero.js';
+/* Note: You may need to change the path to fit your project structure */
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  /* This changes the text color */
+  -webkit-text-fill-color: #your-heading-color; 
+  /* This prevents the blue/white background by using a long transition */
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: 0 0 0px 1000px transparent inset;
+}
