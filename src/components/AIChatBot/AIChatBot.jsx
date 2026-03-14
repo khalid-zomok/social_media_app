@@ -87,6 +87,7 @@ export default function AIChatBot({ isOpen, setIsOpen }) {
         <MdOutlineSmartToy size={30} color="white" />
       </Button>
     );
+    
   }
 
   return (
