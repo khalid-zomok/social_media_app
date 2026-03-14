@@ -2,9 +2,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  // أضف السطر ده هنا (تأكد أن الاسم يطابق اسم الـ Repo على جيت هاب)
-  base: "/social_media_app/", 
+export default defineConfig(({ command, mode }) => {
+  return {
+    plugins: [react(), tailwindcss()],
+    // إذا كنت ترفع لـ GitHub Pages (production) استخدم المسار الفرعي
+    // إذا كنت على Vercel أو Local، استخدم المسار الرئيسي '/'
+    base: process.env.NODE_ENV === 'production' && mode === 'github' 
+          ? "/social_media_app/" 
+          : "/",
+  }
 })
